@@ -1,0 +1,155 @@
+<mat-toolbar class="navbar">
+  <div class="logo" routerLink="">sneakers</div>
+  <span class="navbar_span" routerLink="/collections">Collections</span>
+  <span class="navbar_span" routerLink="/men">Men</span>
+  <span class="navbar_span" routerLink="/women">Women</span>
+  <span class="navbar_span" routerLink="/about">About</span>
+  <span class="navbar_span" routerLink="/contact">Contact</span>
+
+  <div class="icons_container">
+    <div class="cart_wrapper">
+      <img
+        (click)="openCartContent()"
+        class="cart_container"
+        src="../../../assets/icon-cart.svg"
+        alt=""
+      />
+      <div *ngIf="addItem === true" class="little_number">
+        {{ numberOfItems }}
+      </div>
+      <div *ngIf="cartMenu === true" class="openCartContainer">
+        <div class="menu_title_cart">
+          <h4>Cart</h4>
+        </div>
+        <div *ngIf="addItem === false" class="cart_content">
+          Your cart is empty
+        </div>
+        <div *ngIf="addItem === true" class="added_items">
+          <div class="item_wrapper">
+            <img
+              class="product_image"
+              src="../../../assets/image-product-1-thumbnail.jpg"
+              alt=""
+            />
+            <div class="text_wrapper_cart">
+              <span class="description"> Fall Limited Edition Sneakers </span>
+              <span class="price"
+                >$125x{{ numberOfItems }} ${{ 125 * numberOfItems }}</span
+              >
+            </div>
+            <div class="delete_icon_wrapper">
+              <img
+                class="delete_icon"
+                src="../../../assets/icon-delete.svg"
+                alt=""
+                (click)="addItemToCart()"
+              />
+            </div>
+          </div>
+          <button class="checkout_button" routerLink="/checkout">
+            Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <img
+        class="avatar_container"
+        src="../../../assets/image-avatar.png"
+        alt=""
+      />
+    </div>
+  </div>
+</mat-toolbar>
+<div class="main">
+  <div class="images_wrapper">
+    <div class="main_image">
+      <img
+        src="../../../assets/image-product-1.jpg"
+        alt=""
+        *ngIf="imageChoice === 1"
+      />
+      <img
+        src="../../../assets/image-product-2.jpg"
+        alt=""
+        *ngIf="imageChoice === 2"
+      />
+      <img
+        src="../../../assets/image-product-3.jpg"
+        alt=""
+        *ngIf="imageChoice === 3"
+      />
+      <img
+        src="../../../assets/image-product-4.jpg"
+        alt=""
+        *ngIf="imageChoice === 4"
+      />
+    </div>
+    <div class="small_images_wrapper">
+      <div class="small_image">
+        <img
+          src="../../../assets/image-product-1-thumbnail.jpg"
+          alt=""
+          (click)="imageChoice = 1"
+          [ngClass]="{ changeBorder: imageChoice === 1 }"
+        />
+      </div>
+      <div class="small_image">
+        <img
+          src="../../../assets/image-product-2-thumbnail.jpg"
+          alt=""
+          (click)="imageChoice = 2"
+          [ngClass]="{ changeBorder: imageChoice === 2 }"
+        />
+      </div>
+      <div class="small_image">
+        <img
+          src="../../../assets/image-product-3-thumbnail.jpg"
+          alt=""
+          (click)="imageChoice = 3"
+          [ngClass]="{ changeBorder: imageChoice === 3 }"
+        />
+      </div>
+      <div class="small_image">
+        <img
+          src="../../../assets/image-product-4-thumbnail.jpg"
+          alt=""
+          (click)="imageChoice = 4"
+          [ngClass]="{ changeBorder: imageChoice === 4 }"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="text_wrapper">
+    <h3>SNEAKER COMPANY</h3>
+    <h1>Fall Limited Edition Sneakers</h1>
+    <p>
+      These low-profile sneakers are your perfect casual wear companion.
+      Featuring a durable rubber outer sole, they'll withstand everything the
+      weather can offer.
+    </p>
+    <div class="prices_wrapper">
+      <h2>$125.00</h2>
+      <span class="percent">50%</span>
+    </div>
+    <div class="price_reduced">$250.00</div>
+    <div class="btn_wrapper">
+      <div class="increment_wrapper">
+        <button class="btn" (click)="decreaseButton()">
+          <img src="../../../assets/icon-minus.svg" alt="" />
+        </button>
+        <span>
+          {{ numberOfItems }}
+        </span>
+        <button class="btn" (click)="increaseButton()">
+          <img src="../../../assets/icon-plus.svg" alt="" />
+        </button>
+      </div>
+      <button class="btn-cart" (click)="addItemToCart()">
+        <img src="../../../assets/icon-cart.svg" alt="" />
+        Add to cart
+      </button>
+    </div>
+  </div>
+</div>

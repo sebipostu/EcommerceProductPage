@@ -1,0 +1,333 @@
+:root {
+  --veryDarkblue: hsl(220, 13%, 13%);
+  --darkGrayishBlue: hsl(219, 9%, 45%);
+  --grayishBlue: hsl(220, 14%, 75%);
+  --lightGrayishBlue: hsl(223, 64%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --orange: hsl(26, 100%, 55%);
+  --paleOrange: hsl(25, 100%, 94%);
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.navbar {
+  align-items: center;
+  width: 80%;
+  height: 100px;
+  margin: 0 10%;
+  background-color: white;
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+}
+.navbar .navbar_span {
+  padding: 0 0.8rem;
+  color: var(--darkGrayishBlue);
+}
+.navbar .navbar_span:hover {
+  font-weight: 700;
+  border-bottom: 4px solid var(--orange);
+  padding-bottom: 32px;
+  padding-top: 32px;
+  cursor: pointer;
+
+  position: relative;
+}
+.icons_container {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 10%;
+  background-color: white;
+}
+.cart_wrapper {
+  display: flex;
+}
+.cart_container {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.little_number {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--orange);
+  font-size: 10px;
+  position: relative;
+  right: 5px;
+  top: -5px;
+}
+.avatar_container {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.avatar_container:hover {
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+  position: relative;
+  right: -2px;
+  transform: scale(1.1);
+}
+.logo {
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  padding-right: 2rem;
+}
+.main {
+  width: 90%;
+  height: 70%;
+  margin: 0 50px;
+  display: flex;
+  justify-content: center;
+}
+.images_wrapper {
+  width: 500px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+}
+
+.main_image {
+  width: 450px;
+  height: 500px;
+}
+.main_image img {
+  width: 450px;
+  height: 450px;
+  margin: 1rem 0;
+  border-radius: 30px;
+}
+.small_images_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+  height: 200px;
+}
+.small_image {
+  width: 100px;
+  height: 100px;
+}
+.small_image img {
+  width: 100px;
+  height: 100px;
+
+  margin-right: 16px;
+  border-radius: 20px;
+}
+.changeBorder {
+  border: 5px solid var(--orange);
+  opacity: 0.3;
+  border-radius: 20px;
+  position: relative;
+  top: -3px;
+  left: -3px;
+}
+.small_image img:hover {
+  cursor: pointer;
+  position: relative;
+  opacity: 0.7;
+}
+.text_wrapper {
+  width: 500px;
+  height: 90%;
+  margin: 5% 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.text_wrapper h3 {
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--orange);
+  letter-spacing: 3px;
+}
+.text_wrapper h1 {
+  font-weight: 700;
+  font-size: 40px;
+  margin: 1rem 0;
+}
+.text_wrapper p {
+  color: var(--darkGrayishBlue);
+  margin-bottom: 1rem;
+}
+.prices_wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.prices_wrapper h2 {
+  font-size: 32px;
+}
+.percent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--orange);
+  background-color: var(--paleOrange);
+  border-radius: 10px;
+  width: 50px;
+  height: max-content;
+  margin-left: 1rem;
+  position: relative;
+  top: 10px;
+}
+.price_reduced {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--grayishBlue);
+  text-decoration: line-through;
+}
+.btn_wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+.increment_wrapper {
+  background-color: var(--lightGrayishBlue);
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  margin-right: 2rem;
+  border-radius: 15px;
+}
+.btn {
+  height: 50px;
+  width: 50px;
+  border: transparent;
+  border-radius: 15px;
+  background-color: var(--lightGrayishBlue);
+  cursor: pointer;
+}
+.btn-cart {
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: var(--orange);
+  border: transparent;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.btn-cart img {
+  margin-right: 1rem;
+}
+
+.openCartContainer {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  z-index: 1000;
+  background-color: white;
+  top: 60px;
+  right: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 20px 20px 2px rgba(0, 0, 0, 0.31);
+  overflow: hidden;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.menu_title_cart {
+  width: 100%;
+  height: 20%;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 1px solid var(--grayishBlue);
+  display: flex;
+  align-items: center;
+}
+.menu_title_cart h4 {
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+}
+.cart_content {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: var(--darkGrayishBlue);
+}
+.added_items {
+  width: 260px;
+  height: 180px;
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item_wrapper {
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+.item_wrapper .product_image {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.delete_icon_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item_wrapper .delete_icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+}
+.text_wrapper_cart {
+  height: 70px;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.description {
+  font-size: 12px;
+  width: 160px;
+  height: 25px;
+}
+.price {
+  font-size: 12px;
+  width: 160px;
+  height: 25px;
+  font-weight: 700;
+}
+.checkout_button {
+  width: 100%;
+  height: 50px;
+  font-size: 12px;
+  border: none;
+  background-color: var(--orange);
+  border-radius: 10px;
+  color: white;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+.delete_icon {
+  cursor: pointer;
+}

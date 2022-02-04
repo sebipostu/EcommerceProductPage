@@ -1,0 +1,63 @@
+<mat-toolbar class="navbar">
+  <div class="logo" routerLink="">sneakers</div>
+  <span class="navbar_span" routerLink="/collections">Collections</span>
+  <span class="navbar_span" routerLink="/men">Men</span>
+  <span class="navbar_span" routerLink="/women">Women</span>
+  <span class="navbar_span" routerLink="/about">About</span>
+  <span class="navbar_span" routerLink="/contact">Contact</span>
+
+  <div class="icons_container">
+    <div class="cart_wrapper">
+      <img
+        (click)="openCartContent()"
+        class="cart_container"
+        src="../../../assets/icon-cart.svg"
+        alt=""
+      />
+      <div *ngIf="addItem === true" class="little_number">
+        {{ numberOfItems }}
+      </div>
+      <div *ngIf="cartMenu === true" class="openCartContainer">
+        <div class="menu_title_cart">
+          <h4>Cart</h4>
+        </div>
+        <div *ngIf="addItem === false" class="cart_content">
+          Your cart is empty
+        </div>
+        <div *ngIf="addItem === true" class="added_items">
+          <div class="item_wrapper">
+            <img
+              class="product_image"
+              src="../../../assets/image-product-1-thumbnail.jpg"
+              alt=""
+            />
+            <div class="text_wrapper_cart">
+              <span class="description"> Fall Limited Edition Sneakers </span>
+              <span class="price"
+                >$125x{{ numberOfItems }} ${{ 125 * numberOfItems }}</span
+              >
+            </div>
+            <div class="delete_icon_wrapper">
+              <img
+                class="delete_icon"
+                src="../../../assets/icon-delete.svg"
+                alt=""
+                (click)="addItemToCart()"
+              />
+            </div>
+          </div>
+          <button class="checkout_button">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <img
+        class="avatar_container"
+        src="../../../assets/image-avatar.png"
+        alt=""
+      />
+    </div>
+  </div>
+</mat-toolbar>
+<span class="main_content"> Coming soon! Stay tuned!</span>

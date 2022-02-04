@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Kumbh+Sans:wght@400;700&family=Outfit:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: border-box;
+  font-size: 16px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+:root {
+  --veryDarkblue: hsl(220, 13%, 13%);
+  --darkGrayishBlue: hsl(219, 9%, 45%);
+  --grayishBlue: hsl(220, 14%, 75%);
+  --lightGrayishBlue: hsl(223, 64%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --orange: hsl(26, 100%, 55%);
+  --paleOrange: hsl(25, 100%, 94%);
+}
